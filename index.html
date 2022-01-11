@@ -13,21 +13,28 @@
 <body>
 
     <h1>Bookworm</h1>
-    <p>Keep track of books in this digital repository</p>
+    <h2>Keep track of books in this digital repository</h2>
 
 
     <form>
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title"><br>
+        <div>
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title">
+        </div>
 
-        <label for="author">Author:</label>
-        <input type="text" id="author" name="author"><br>
+        <div>
+            <label for="author">Author:</label><br>
+            <input type="text" id="author" name="author">
+        </div>
+        
+        <div>
+            <label for="status">Status:</label><br>
+            <select name = "status">
+                <option value = "Not Read" selected>Not Read</option>
+                <option value = "Read" >Read</option>
+            </select>
+        </div>       
 
-        <label for="status">Status:</label>
-        <select name = "status">
-            <option value = "Not Read" selected>Not Read</option>
-            <option value = "Read" >Read</option>
-        </select>
     </form>
     
     <div class="container">
@@ -35,12 +42,9 @@
             <h3>Title</h3>
             <h3>Author</h3>
             <h3>Status</h3>
-            <h3>Action</h3>
+            .
         </div>
-        
     </div>
-
-
 
 
     <script src="./app.js"></script>
