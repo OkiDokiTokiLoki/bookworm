@@ -40,6 +40,11 @@ form{
     background-color: darkmagenta;
 }
 
+th{
+    width: 237px;
+    padding: 12px 15px;
+}
+
 .headings{
     display: flex;
     justify-content: space-between;
