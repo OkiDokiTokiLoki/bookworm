@@ -8,30 +8,30 @@
     <link rel="stylesheet" href="./style.css">
 
 
-    <title>Bookworm Virtual Library</title>
+    <title>bookworm virtual library</title>
 </head>
 <body>
 
-    <h1>Bookworm</h1>
-    <h2>Keep track of books in this digital repository</h2>
+    <h1>bookworm</h1>
+    <h2>keep track of books in this digital repository</h2>
 
 
     <form>
         <div>
-            <label for="title">Title:</label><br>
-            <input type="text" id="title" name="title">
+            <label for="title">title:</label><br>
+            <input type="text" class="form-input" id="title" name="title">
         </div>
 
         <div>
-            <label for="author">Author:</label><br>
-            <input type="text" id="author" name="author">
+            <label for="author">author:</label><br>
+            <input type="text" class="form-input" id="author" name="author">
         </div>
         
         <div>
-            <label for="status">Status:</label><br>
-            <select name = "status">
-                <option value = "Not Read">Not Read</option>
-                <option value = "Read">Read</option>
+            <label for="status">status:</label><br>
+            <select name="status" class="form-input" id="status">
+                <option value="Not Read">not read</option>
+                <option value="Read">read</option>
             </select>
         </div>  
         
@@ -39,25 +39,15 @@
 
     </form>
 
-    <table class="container">
-        <tr >
-            <th>Title</th>
-            <th>Author</th>
-            <th>Status</th>
-            <th>Action</th>
+    <table class="book-table-container">
+        <tr>
+            <th>title</th>
+            <th>author</th>
+            <th>status</th>
+            <th>action</th>
         </tr>
-        <tbody id="book-table"></tbody>
+        <tbody id="book-table-body"></tbody>
     </table>
-    
-    <!-- <div class="container">
-        <div class="headings">
-            <h3>Title</h3>
-            <h3>Author</h3>
-            <h3>Status</h3>
-            <h3>Action</h3>
-        </div>
-    </div> -->
-
 
     <script src="./app.js"></script>
     
