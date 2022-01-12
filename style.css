@@ -36,12 +36,11 @@ form{
 
 .book-table-container{
 
-
+    width: 100%;
     background-color: darkmagenta;
 }
 
 th{
-    width: 237px;
     padding: 12px 15px;
 }
 
