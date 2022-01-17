@@ -1,9 +1,11 @@
-const bookTitle = document.querySelector('#title');
-const bookAuthor = document.querySelector('#author');
-const bookStatus = document.querySelector('#status');
-const submitBook = document.querySelector('.submit');
-const tableContainer = document.querySelector('.book-table-container');
-const tableBody = 
+// const bookTitle = document.querySelector('#title');
+// const bookAuthor = document.querySelector('#author');
+// const bookStatus = document.querySelector('#status');
+// const submitBook = document.querySelector('.submit');
+// const tableContainer = document.querySelector('.book-table-container');
+// const tableBody = 
+
+const {target} = e;
 
 let myLibrary = [];
 
@@ -23,11 +25,33 @@ let myLibrary = [];
 // console.log(`book 1: ${book1.info()}  || book 2: ${book2.info()}`)
 
 class Book {
-    constructor(title, author, readStatus) {
+    constructor(title, author, status) {
       this.title = title;
       this.author = author;
-      this.readStatus = readStatus;
+      this.status = status;
     }
+}
+
+function clickHandler(){
+    document.addEventListener('click', (e) => {
+        
+        const tr = target.parentNode.parentNode.rowIndex - 1;
+
+        if (target.id === 'submit-book'){
+            addNewBook(e);
+        } else if (target.classList.contains('fa-trash-alt')){
+            myLibrary.splice(tr, 1);
+        } else if (target.classList.contains('fa-check')) {
+            target.classList.remove('fa-check');
+            target.classList.add('fa-times');
+            myLibrary[tr].status = false;
+        } else if (target.classList.contains('fa-times')) {
+            target.classList.remove('fa-times');
+            target.classList.add('fa-check');
+            myLibrary[tr].status = true;
+        }
+        displayLibrary();
+    });
 }
 
 function addBookToLibrary(){
@@ -74,6 +98,23 @@ function displayLibrary(){
         deleteSymbol.classList.add('fas', 'fa-trash-alt');
         bookDelete.appendChild(deleteSymbol);
         bookRow.appendChild(bookDelete);
+    }
+}
+
+function addNewBook(e){
+    e.preventDefault();
+    const form = document.querySelector('form');
+    const titleInput = document.querySelector('#title');
+    const authorInput = document.querySelector('#author');
+    const checkbox = document.querySelector('input[name="checkbox"]');
+
+    if (titleInput.value !== '' && authorInput.value !== ''){
+        if (checkbox.checked){
+            addBookToLibrary(titleInput.value, authorInput.value, true);
+        } else {
+            addBookToLibrary(titleInput.value, authorInput.value, false)
+        }
+        form.reset();
     }
 }
 
