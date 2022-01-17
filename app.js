@@ -1,28 +1,4 @@
-// const bookTitle = document.querySelector('#title');
-// const bookAuthor = document.querySelector('#author');
-// const bookStatus = document.querySelector('#status');
-// const submitBook = document.querySelector('.submit');
-// const tableContainer = document.querySelector('.book-table-container');
-// const tableBody = 
-
-const {target} = e;
-
 let myLibrary = [];
-
-// submitBook.addEventListener('click', addBookToLibrary());
-
-// function Book(title, author, readTheBook){
-//     this.title = title
-//     this.author = author
-//     this.readTheBook = readTheBook
-//     this.info = () => {
-//         return `${title}, ${author}, ${readTheBook}`
-//     }
-// }
-
-// const book1 = new Book('Harry Potter', 'JK Rowling', 'yes');
-// const book2 = new Book('GOT', 'GRRM', 'no');
-// console.log(`book 1: ${book1.info()}  || book 2: ${book2.info()}`)
 
 class Book {
     constructor(title, author, status) {
@@ -34,7 +10,7 @@ class Book {
 
 function clickHandler(){
     document.addEventListener('click', (e) => {
-        
+        const {target} = e;
         const tr = target.parentNode.parentNode.rowIndex - 1;
 
         if (target.id === 'submit-book'){
@@ -52,18 +28,6 @@ function clickHandler(){
         }
         displayLibrary();
     });
-}
-
-function addBookToLibrary(){
-    //e.preventDefault();
-    const newBook = new Book(title, author, readStatus);
-    myLibrary.push(newBook);
-    displayLibrary();
-
-
-    // console.log(library);
-    // // render();
-    // form.reset();
 }
 
 function displayLibrary(){
@@ -95,7 +59,7 @@ function displayLibrary(){
 
         const bookDelete = document.createElement('td');
         const deleteSymbol = document.createElement('i');
-        deleteSymbol.classList.add('fas', 'fa-trash-alt');
+        deleteSymbol.classList.add('far', 'fa-trash-alt');
         bookDelete.appendChild(deleteSymbol);
         bookRow.appendChild(bookDelete);
     }
@@ -118,16 +82,11 @@ function addNewBook(e){
     }
 }
 
-// function render() {
-//     const books = document.querySelectorAll('.book');
-//     books.forEach(book => tableBody.removeChild(book));
-   
-//     for (let i=0; i<library.length; i++){
-//         createBook(library[i]);
-//     }
-// }
+function addBookToLibrary(title, author, status){
+    const newBook = new Book(title, author, status);
+    myLibrary.push(newBook);
+    displayLibrary();
+}
 
-// readBtn.addEventListener('click', () => { 
-//     item.read = !item.read; 
-//     render();
-// }); 
+displayLibrary();
+clickHandler();
