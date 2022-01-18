@@ -1,17 +1,15 @@
 let myLibrary = [];
 
-class Book {
-    constructor(title, author, status) {
-      this.title = title;
-      this.author = author;
-      this.status = status;
-    }
+function Book(title, author, status){
+    this.title = title
+    this.author = author
+    this.status = status
 }
 
 function clickHandler(){
     document.addEventListener('click', (e) => {
         const {target} = e;
-        const tr = target.parentNode.parentNode.rowIndex - 1;
+        const tr = target.parentNode.parentNode.rowIndex - 1;  // see bookRow below
 
         if (target.id === 'submit-book'){
             addNewBook(e);
@@ -35,8 +33,7 @@ function displayLibrary(){
     libraryList.textContent = '';
 
     for (let i = 0; i < myLibrary.length; i += 1){
-        const bookRow = document.createElement('tr');
-        bookRow.classList.add('book-info');
+        const bookRow = document.createElement('tr');  // see tr above
         libraryList.appendChild(bookRow);
 
         const bookTitle = document.createElement('td');
