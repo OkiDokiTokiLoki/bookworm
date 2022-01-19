@@ -11,19 +11,14 @@ body{
     margin: 7rem auto;
     height: 100%;
     width: 50%;
-
-    background-color: blanchedalmond;
-    border: 2px solid red;
 }
 
 h1{
-    background-color: brown;
     margin: 0;
     padding: 0;
 }
 
 h2{
-    background-color: cadetblue;
     margin: 0;
     padding: 0;
 }   
@@ -31,13 +26,10 @@ h2{
 form{
     display: flex;
     justify-content: space-between;
-    background-color: darkolivegreen;
 }
 
 .book-table-container{
-
     width: 100%;
-    background-color: darkmagenta;
 }
 
 th{
@@ -50,4 +42,16 @@ th{
     background-color: darkslategray;
 }
 
+footer{
+    position: absolute;
+    bottom: 20px;
+}
 
+footer a{
+    text-decoration: none;
+    transition: all 250ms ease;
+}
+
+footer a:hover{
+    color: hsl(337, 72%, 57%);;
+}
