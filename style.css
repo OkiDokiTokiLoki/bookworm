@@ -1,57 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 
 *,
 *::before,
 *::after{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
     margin: 7rem auto;
-    height: 100%;
     width: 50%;
+    font-family: 'Raleway', sans-serif;
 }
 
 h1{
-    margin: 0;
-    padding: 0;
+    font-weight: 100;
 }
 
-h2{
-    margin: 0;
-    padding: 0;
-}   
+main{
+    padding: 2rem 0;
+    height: 600px;
+}
 
 form{
     display: flex;
     justify-content: space-between;
 }
 
-.book-table-container{
-    width: 100%;
+.submit-book{
+    background-color: rgb(24, 155, 216);
+    padding: 10px 20px;
+    border: none;
 }
 
-th{
-    padding: 12px 15px;
+table{
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
 }
 
-.headings{
-    display: flex;
-    justify-content: space-between;
-    background-color: darkslategray;
+td{
+    padding: 10px 5rem;
+    text-align: center;
+    border-bottom: 1px solid rgb(228, 228, 228);
 }
 
 footer{
-    position: absolute;
-    bottom: 20px;
+    text-align: center;
 }
 
-footer a{
-    text-decoration: none;
-    transition: all 250ms ease;
-}
-
-footer a:hover{
-    color: hsl(337, 72%, 57%);;
-}
