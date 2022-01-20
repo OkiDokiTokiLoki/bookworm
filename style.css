@@ -27,7 +27,7 @@ h1{
 }
 
 main{
-    padding: 2rem 0;
+    padding: 5rem 0;
     height: 600px;
 }
 
@@ -36,32 +36,52 @@ form{
     justify-content: space-between;
 }
 
+input[type=text]{
+    height: 25px;
+    width: 200px;
+}
+
+input[type=checkbox]:hover,
+input:focus,
+input:active{
+    border-radius: 3px;
+    border: 1px solid var(--add-btn);
+    outline: 1px solid transparent;
+}
+
+.checkbox-label{
+    margin-left: 5px;
+}
+
+.fas,
+.far,
+input[type=checkbox],  
+.submit-book{
+    cursor: pointer;
+}
+
 .submit-book{
     background-color: var(--add-btn);
     color: #fff;
-    padding: 10px 30px;
+    padding: 0 30px;
     border: none;
-    border-radius: 20px;
-    cursor: pointer;
+    border-radius: 50px;
 }
 
 .fa-trash-alt{
     color: var(--remove-btn);
-    cursor: pointer;
 }
 
 .fa-times{
     color: var(--uncheck-btn);
-    cursor: pointer;
 }
 
 .fa-check{
     color: var(--check-btn);
-    cursor: pointer;
 }
 
 table{
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-left: auto;
     margin-right: auto;
     padding: 0;
