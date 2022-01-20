@@ -9,6 +9,13 @@
     padding: 0;
 }
 
+:root{
+    --add-btn: hsl(193, 93%, 46%);
+    --remove-btn: hsl(7, 92%, 52%);
+    --check-btn: hsl(141, 31%, 50%);
+    --uncheck-btn: hsl(231, 46%, 52%);
+}
+
 body{
     margin: 7rem auto;
     width: 50%;
@@ -30,9 +37,27 @@ form{
 }
 
 .submit-book{
-    background-color: rgb(24, 155, 216);
-    padding: 10px 20px;
+    background-color: var(--add-btn);
+    color: #fff;
+    padding: 10px 30px;
     border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.fa-trash-alt{
+    color: var(--remove-btn);
+    cursor: pointer;
+}
+
+.fa-times{
+    color: var(--uncheck-btn);
+    cursor: pointer;
+}
+
+.fa-check{
+    color: var(--check-btn);
+    cursor: pointer;
 }
 
 table{
@@ -47,6 +72,8 @@ td{
     text-align: center;
     border-bottom: 1px solid rgb(228, 228, 228);
 }
+
+
 
 footer{
     text-align: center;
