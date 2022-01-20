@@ -93,9 +93,16 @@ td{
     border-bottom: 1px solid rgb(228, 228, 228);
 }
 
-
-
 footer{
     text-align: center;
 }
 
+footer a{
+    color: inherit;
+    text-decoration: none;
+    transition: all 200ms ease;
+}
+
+footer a:hover{
+    color: var(--remove-btn);
+}
