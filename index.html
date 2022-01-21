@@ -20,24 +20,20 @@
 
     <main>
         <form>
-            <div>
-                <label for="title">title:</label><br>
-                <input type="text" class="form-input" id="title" name="title">
-            </div>
-    
-            <div>
-                <label for="author">author:</label><br>
+            <label class="form-input" for="title">title: <br>
+                <input type="text" id="title" name="title">
+            </label>
+
+            <label class="form-input" for="author">author: <br>
                 <input type="text" class="form-input" id="author" name="author">
-            </div>
-            
-            <div>
-                <label for="status">status:</label><br>
+            </label>
+        
+            <label class="form-checkbox" for="status">status: <br>
                 <input type="checkbox" name="checkbox" autocomplete="off">
-                <span class="checkbox-label">read the book</span>
-            </div>  
+                read the book
+            </label>
             
             <input type="submit" value="add" id="submit-book" class="submit-book">
-    
         </form>
     
         <table class="book-table-container">

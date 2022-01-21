@@ -41,6 +41,7 @@ input[type=text]{
     width: 200px;
 }
 
+input[type=text]:hover,
 input[type=checkbox]:hover,
 input:focus,
 input:active{
