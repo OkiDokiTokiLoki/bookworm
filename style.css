@@ -14,6 +14,7 @@
     --remove-btn: hsl(7, 92%, 52%);
     --check-btn: hsl(141, 31%, 50%);
     --uncheck-btn: hsl(231, 46%, 52%);
+    --table-cell: hsl(0, 0%, 85%);
 }
 
 body{
@@ -53,7 +54,6 @@ input:focus,
 input:active{
     border: 1px solid var(--add-btn);
     outline: 1px solid transparent;
-    
 }
 
 .checkbox-label{
@@ -91,13 +91,27 @@ table{
     margin-top: 3rem;
     margin-left: auto;
     margin-right: auto;
-    padding: 0;
 }
 
 td{
-    padding: 10px 5rem;
     text-align: center;
-    border-bottom: 1px solid rgb(228, 228, 228);
+    border-bottom: 1px solid var(--table-cell);
+}
+
+.table-header{
+    background-color: var(--table-cell);
+}
+
+.table-title{
+    padding: 10px 9rem;
+}
+
+.table-author{
+    padding: 10px 5rem;
+}
+
+.table-control{
+    padding: 10px 2rem;
 }
 
 footer{

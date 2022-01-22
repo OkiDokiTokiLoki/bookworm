@@ -37,14 +37,17 @@ function displayLibrary(){
         libraryList.appendChild(bookRow);
 
         const bookTitle = document.createElement('td');
+        bookTitle.classList.add('table-title');
         bookTitle.textContent = myLibrary[i].title;
         bookRow.appendChild(bookTitle);
 
         const bookAuthor = document.createElement('td');
+        bookAuthor.classList.add('table-author');
         bookAuthor.textContent = myLibrary[i].author;
         bookRow.appendChild(bookAuthor);
 
         const bookStatus = document.createElement('td');
+        bookStatus.classList.add('table-control');
         const statusSymbol = document.createElement('i');
         if (myLibrary[i].status === false){
             statusSymbol.classList.add('fas', 'fa-times');
@@ -55,6 +58,7 @@ function displayLibrary(){
         bookRow.appendChild(bookStatus);
 
         const bookDelete = document.createElement('td');
+        bookDelete.classList.add('table-control');
         const deleteSymbol = document.createElement('i');
         deleteSymbol.classList.add('far', 'fa-trash-alt');
         bookDelete.appendChild(deleteSymbol);
