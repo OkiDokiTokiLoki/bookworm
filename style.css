@@ -18,7 +18,7 @@
 }
 
 body{
-    margin: 7rem auto;
+    margin: 4rem auto;
     width: 50%;
     font-family: 'Raleway', sans-serif;
 }
@@ -87,11 +87,20 @@ input[type=checkbox],
     color: var(--check-btn);
 }
 
-table{
+.book-table-container{
+    overflow-y: scroll;
+    height: 400px;
     margin-top: 3rem;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+table{
+    border-collapse: collapse;
     width: 100%;
+}
+
+thead th{
+    position: sticky;
+    top: 0;
 }
 
 th,
@@ -118,6 +127,7 @@ th{
 }
 
 footer{
+    margin-top: 4rem;
     text-align: center;
 }
 
