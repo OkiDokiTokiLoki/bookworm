@@ -36,20 +36,23 @@
             <input type="submit" value="add" id="submit-book" class="submit-book">
         </form>
     
-        <table class="book-table-container">
-            <thead>
-                <tr>
-                    <td class="table-title table-header">title</td>
-                    <td class="table-author table-header">author</td>
-                    <td class="table-control table-header">status</td>
-                    <td class="table-control table-header">action</td>
-                </tr>
-            </thead>
-            
-            <tbody id="book-table-body">
-                <!-- book objects get created here -->
-            </tbody>
-        </table>
+        <div class="book-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="table-title table-header">title</th>
+                        <th class="table-author table-header">author</th>
+                        <th class="table-control table-header">status</th>
+                        <th class="table-control table-header">action</th>
+                    </tr>
+                </thead>
+                
+                <tbody id="book-table-body">
+                    <!-- book objects get created here -->
+                </tbody>
+            </table>
+        </div>
+
     </main>    
 
     <footer>

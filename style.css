@@ -94,12 +94,14 @@ table{
     width: 100%;
 }
 
+th,
 td{
     text-align: center;
     border-bottom: 1px solid var(--table-cell);
 }
 
-.table-header{
+th{
+    font-weight: 100;
     background-color: var(--table-cell);
 }
 
