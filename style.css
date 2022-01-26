@@ -71,7 +71,7 @@ input[type=checkbox],
     background-color: var(--add-btn);
     color: #fff;
     padding: 0 30px;
-    border: none;
+    border: 1px solid var(--add-btn);
     border-radius: 50px;
 }
 
