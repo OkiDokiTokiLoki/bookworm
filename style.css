@@ -10,7 +10,7 @@
 }
 
 :root{
-    --add-btn: hsl(193, 93%, 46%);
+    --add-btn: hsl(193, 99%, 40%);
     --remove-btn: hsl(7, 92%, 52%);
     --check-btn: hsl(141, 31%, 50%);
     --uncheck-btn: hsl(231, 46%, 52%);
@@ -58,6 +58,10 @@ input:active{
 
 .checkbox-label{
     margin-left: 5px;
+}
+
+input[type="checkbox"]{
+    accent-color: var(--add-btn);
 }
 
 .fas,
