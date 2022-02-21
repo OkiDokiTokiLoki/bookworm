@@ -9,17 +9,49 @@
 }
 
 :root{
-    --add-btn: hsl(193, 99%, 40%);
+    --add-btn-dark: hsl(300, 56%, 52%);
+    --add-btn-light: hsl(193, 99%, 40%);
     --remove-btn: hsl(7, 92%, 52%);
     --check-btn: hsl(141, 31%, 50%);
     --uncheck-btn: hsl(231, 46%, 52%);
     --table-cell: hsl(0, 0%, 85%);
 }
 
+.dark{
+    background-color: hsl(0, 0%, 15%);   
+    color: #fff;
+}
+
+.dark th{
+    color: #000;
+}
+
+.light{
+    background-color: #fff;
+    color: #000;
+}
+
+.light #submit-book{
+    background-color: var(--add-btn-light);
+    border-color: var(--add-btn-light);
+}
+
+.light input[type="checkbox"]{
+    accent-color: var(--add-btn-light);
+}
+
 body{
     margin: 4rem auto;
     width: 50%;
     font-family: 'Raleway', sans-serif;
+
+    background-color: hsl(0, 0%, 15%);   
+    color: #fff;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
 }
 
 h1{
@@ -51,7 +83,7 @@ input[type=text]:hover,
 input[type=checkbox]:hover,
 input:focus,
 input:active{
-    border: 1px solid var(--add-btn);
+    border: 1px solid var(--add-btn-dark);
     outline: 1px solid transparent;
 }
 
@@ -60,7 +92,7 @@ input:active{
 }
 
 input[type="checkbox"]{
-    accent-color: var(--add-btn);
+    accent-color: var(--add-btn-dark);
 }
 
 .fas,
@@ -71,10 +103,10 @@ input[type=checkbox],
 }
 
 .submit-book{
-    background-color: var(--add-btn);
+    background-color: var(--add-btn-dark);
     color: #fff;
     padding: 0 30px;
-    border: 1px solid var(--add-btn);
+    border: 1px solid var(--add-btn-dark);
     border-radius: 50px;
 }
 
@@ -104,6 +136,7 @@ table{
 thead th{
     position: sticky;
     top: 0;
+    color: #000;
 }
 
 th,

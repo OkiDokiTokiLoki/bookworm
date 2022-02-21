@@ -28,6 +28,30 @@ function clickHandler(){
     });
 }
 
+const themeChange = document.querySelector('#themeChange');
+themeChange.onclick = () => {
+    const body = document.body;
+
+    if (body.classList.contains('dark')){
+        body.classList.replace('dark', 'light');
+    }
+    else if (body.classList.contains('light')){
+        body.classList.replace('light', 'dark');
+    }
+    else {
+        body.classList.add('light');
+    }
+};
+
+
+function themeChanger(){
+    body.classList.add('light');
+
+    if (body.classList.contains('light')){
+        body.classList.remove('light')
+    };
+}
+
 function displayLibrary(){
     const libraryList = document.querySelector('#book-table-body');
     libraryList.textContent = '';
