@@ -1,9 +1,9 @@
 let myLibrary = [];
 
-function Book(title, author, status){
-    this.title = title
-    this.author = author
-    this.status = status
+class Book{
+    constructor(title, author, status){
+        return {title, author, status}
+    }
 }
 
 function clickHandler(){
@@ -23,7 +23,7 @@ function clickHandler(){
             target.classList.remove('fa-times');
             target.classList.add('fa-check');
             myLibrary[tr].status = true;
-        }
+        } 
         displayLibrary();
     });
 }
