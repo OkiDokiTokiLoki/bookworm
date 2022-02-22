@@ -13,15 +13,15 @@ function clickHandler(){
 
         if (target.id === 'submit-book'){
             addNewBook(e);
-        } else if (target.classList.contains('fa-trash-alt')){
+        } else if (target.classList.contains('delete-icon')){
             myLibrary.splice(tr, 1);
-        } else if (target.classList.contains('fa-check')) {
-            target.classList.remove('fa-check');
-            target.classList.add('fa-times');
+        } else if (target.classList.contains('check-icon')) {
+            target.classList.remove('check-icon');
+            target.classList.add('times-icon');
             myLibrary[tr].status = false;
-        } else if (target.classList.contains('fa-times')) {
-            target.classList.remove('fa-times');
-            target.classList.add('fa-check');
+        } else if (target.classList.contains('times-icon')) {
+            target.classList.remove('times-icon');
+            target.classList.add('check-icon');
             myLibrary[tr].status = true;
         } 
         displayLibrary();
@@ -72,19 +72,19 @@ function displayLibrary(){
 
         const bookStatus = document.createElement('td');
         bookStatus.classList.add('table-control');
-        const statusSymbol = document.createElement('i');
+        const statusSymbol = document.createElement('img');
         if (myLibrary[i].status === false){
-            statusSymbol.classList.add('fas', 'fa-times');
+            statusSymbol.classList.add('icon', 'times-icon');
         } else {
-            statusSymbol.classList.add('fas', 'fa-check');
+            statusSymbol.classList.add('icon', 'check-icon');
         }
         bookStatus.appendChild(statusSymbol);
         bookRow.appendChild(bookStatus);
 
         const bookDelete = document.createElement('td');
         bookDelete.classList.add('table-control');
-        const deleteSymbol = document.createElement('i');
-        deleteSymbol.classList.add('far', 'fa-trash-alt');
+        const deleteSymbol = document.createElement('img');
+        deleteSymbol.classList.add('icon', 'delete-icon');
         bookDelete.appendChild(deleteSymbol);
         bookRow.appendChild(bookDelete);
     }
