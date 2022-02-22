@@ -11,8 +11,6 @@
 :root{
     --add-btn-dark: hsl(300, 56%, 52%);
     --add-btn-light: hsl(193, 99%, 40%);
-    --check-btn: hsl(141, 31%, 50%);
-    --uncheck-btn: hsl(231, 46%, 52%);
     --table-cell: hsl(0, 0%, 85%);
 }
 
@@ -196,4 +194,31 @@ footer a{
 
 footer a:hover{
     color: #f52e14;
+}
+
+@media screen and (max-width: 950px) {
+    body {
+      margin: 1em;
+      width: 90%;
+      overflow-x: hidden;
+    }
+
+    form{
+        flex-direction: column;
+    }
+
+    form label{
+        margin: 10px;
+    }
+
+    input[type=text]{
+        height: 35px;
+        width: 100%;
+    }
+
+    .submit-book{
+        width: 35%;
+        padding: 0.5em 1em;
+        margin-left: 10px;
+    }
 }
